@@ -1,0 +1,487 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Apple Style
+Version: 1.3
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/apple-style/
+
+This is a FREE theme and is available under a MIT License:
+http://www.opensource.org/licenses/mit-license.php
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+*/
+
+/* !CSS RESET */
+/* prefix declarations */
+/* Keyframes */
+@-webkit-keyframes paused {
+  /* animate the pause button when Sequence is paused */
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0 0;
+    opacity: .7;
+  }
+}
+
+@-moz-keyframes paused {
+  /* animate the pause button when Sequence is paused */
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0 0;
+    opacity: .7;
+  }
+}
+
+@-ms-keyframes paused {
+  /* animate the pause button when Sequence is paused */
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0 0;
+    opacity: .7;
+  }
+}
+
+@-o-keyframes paused {
+  /* animate the pause button when Sequence is paused */
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0 0;
+    opacity: .7;
+  }
+}
+
+@keyframes paused {
+  /* animate the pause button when Sequence is paused */
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0 0;
+    opacity: .7;
+  }
+}
+
+@-webkit-keyframes status-bar {
+  /* cause the status bar to move */
+  0% {
+    background-position: -119px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes status-bar {
+  /* cause the status bar to move */
+  0% {
+    background-position: -119px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-ms-keyframes status-bar {
+  /* cause the status bar to move */
+  0% {
+    background-position: -119px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes status-bar {
+  /* cause the status bar to move */
+  0% {
+    background-position: -119px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes status-bar {
+  /* cause the status bar to move */
+  0% {
+    background-position: -119px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes preload {
+  /* preloader icons */
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes preload {
+  /* preloader icons */
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes preload {
+  /* preloader icons */
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes preload {
+  /* preloader icons */
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes preload {
+  /* preloader icons */
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* !Keyframes */
+#sequence-theme-time-at-uc {
+	background-image: url(../images/essays-bkgrnd.png);
+ /* background-repeat: repeat-x;*/
+  background-color: #FFF;
+  /*font-size: .75em;*/
+  height: 895px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+/* when in fallback mode (for browsers that don't support transitions) hide anything outside of the Sequence container */
+#sequence-time-essays.sequence-fallback {
+  overflow: hidden;
+}
+
+#sequence-time-essays {
+	height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 100%; 
+ 
+}
+
+#sequence-time-essays > .sequence-canvas {
+  height: 90%;
+  width: 90%;
+}
+#sequence-time-essays > .sequence-canvas > li {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: 1;
+}
+#sequence-time-essays > .sequence-canvas li > * {
+  position: absolute;
+}
+
+.essay {
+	height: 100%;
+ 	 width: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+/*pagination*/
+
+#sequence-time-essays #essay-pagination {
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  width: 175px;
+  z-index: 9999;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+
+
+#essay-pagination li {
+  display: inline-block;
+  *display: inline;
+  /* Hack for IE7 and below as they don't support inline-block */
+  height: 20px;
+  padding: 10px;
+  z-index:10000;
+}
+
+
+
+#essay-pagination li  {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+#essay-pagination li.current  {
+  opacity: 1;
+}
+/*end pagination*/
+
+/*controls*/
+#sequence-time-essays .controls {
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  width: 80px;
+  z-index: 9999;
+}
+
+#sequence-time-essays .sequence-prev,
+#sequence-time-essays .sequence-next {
+  opacity: 0.6;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+#sequence-time-essays .sequence-next,
+#sequence-time-essays .sequence-prev,
+#sequence-time-essays .sequence-pause {
+  position: absolute;
+  z-index: 10000;
+  top: 10px;
+}
+#sequence-time-essays .sequence-next {
+  background: url("../images/button-arrow-next.png")no-repeat;
+  height: 36px;
+  left: 54px;
+  width: 26px;
+}
+
+#sequence-time-essays .sequence-next:hover,
+#sequence-time-essays .sequence-prev:hover {
+  opacity: 1;
+   -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+#sequence-time-essays .sequence-prev {
+  left: 0;
+  background: url("../images/button-arrow-prev.png")no-repeat;
+  height: 36px;
+  width: 26px;
+}
+#sequence-time-essays .sequence-pause {
+  background: url("../button-arrow-left.png") 50% 4px no-repeat;
+  cursor: pointer;
+  height: 24px;
+  left: 78px;
+  width: 17px;
+}
+#sequence-time-essays .sequence-pause.paused {
+  background: url("../images/bt-play.png") 50% 4px no-repeat;
+  height: 24px;
+  left: 78px;
+  width: 17px;
+}
+#sequence-time-essays .sequence-pause.paused:hover {
+  background-position: 50% -25px;
+}
+#sequence-time-essays .status {
+  background: url("../images/status-bar.png") -119px 0 repeat-y;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  height: 6px;
+  margin: 0 auto;
+  position: relative;
+  top: 4px;
+  width: 118px;
+}
+#sequence-time-essays .status.paused {
+  -webkit-animation: paused 1s linear alternate infinite;
+  -moz-animation: paused 1s linear alternate infinite;
+  -ms-animation: paused 1s linear alternate infinite;
+  -o-animation: paused 1s linear alternate infinite;
+  animation: paused 1s linear alternate infinite;
+}
+#sequence-time-essays .status.active {
+  -webkit-animation: status-bar 4s linear;
+  -moz-animation: status-bar 4s linear;
+  -ms-animation: status-bar 4s linear;
+  -o-animation: status-bar 4s linear;
+  animation: status-bar 4s linear;
+}
+#sequence-time-essays .pause-icon {
+  right: 20px;
+  position: absolute;
+  bottom: 20px;
+}
+/*end controls*/
+
+#sequence-time-essays .sequence-preloader {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 999999;
+}
+#sequence-time-essays .sequence-preloader img {
+  background: #ff9933;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  opacity: 0;
+  position: relative;
+  top: -50%;
+  width: 12px;
+  -webkit-animation: preload 1s infinite;
+  -moz-animation: preload 1s infinite;
+  -ms-animation: preload 1s infinite;
+  -o-animation: preload 1s infinite;
+  animation: preload 1s infinite;
+}
+#sequence-time-essays .sequence-preloader .preloading {
+  height: 12px;
+  margin: 0 auto;
+  top: 50%;
+  position: relative;
+  width: 48px;
+}
+
+#sequence-time-essays .essay {
+  left: -1920px;
+  opacity: 1;
+  position: absolute;
+  top: 5%;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -ms-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  -ms-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+}
+#sequence-time-essays .animate-in .essay {
+  left: 13%;
+  opacity: 1;
+  top: 5%;
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition-duration: 4s;
+  -moz-transition-duration: 4s;
+  -ms-transition-duration: 4s;
+  -o-transition-duration: 4s;
+  transition-duration: 4s;
+}
+#sequence-time-essays .animate-out .essay {
+  left: 1920px;
+  opacity: 1;
+  top: 5%;
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition-duration: 4s;
+  -moz-transition-duration: 4s;
+  -ms-transition-duration: 4s;
+  -o-transition-duration: 4s;
+  transition-duration: 4s;
+}

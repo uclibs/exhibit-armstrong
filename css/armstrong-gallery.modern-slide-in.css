@@ -1,0 +1,731 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Modern Slide In
+Version: 1.3
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/modern-slide-in/
+
+This is a FREE theme and is available under a MIT License:
+http://www.opensource.org/licenses/mit-license.php
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+*/
+
+/* THEME STYLES */
+
+
+
+#sequence-timeline {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  background-color: #000;
+  /*background-image: url("../images/bg-sequence.jpg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: 50% 100%;*/
+  color: white;
+  font-size: 0.625em;
+  margin: 0 auto;
+  position: relative;
+  height: 600px;
+}
+#sequence-timeline > .sequence-canvas {
+  height: 100%;
+  width: 100%;
+}
+#sequence-timeline > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: -50%;
+}
+/*#sequence-timeline > .sequence-canvas > li img {
+  height: 96%;
+}*/
+#sequence-timeline > .sequence-canvas li > * {
+  position: absolute;
+  /* only cause the left and opacity properties to transition */
+  -webkit-transition-property: left, opacity;
+  -moz-transition-property: left, opacity;
+  -ms-transition-property: left, opacity;
+  -o-transition-property: left, opacity;
+  transition-property: left, opacity;
+}
+
+#sequence-timeline .sequence-next,
+#sequence-timeline .sequence-prev {
+  color: white;
+  cursor: pointer;
+  /*display: none;*/
+  font-weight: bold;
+  height: 50px;
+  padding: 10px 5px;
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  width: 76px;
+  margin-top: -47.5px;
+}
+
+#sequence-timeline .sequence-pause {
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+#sequence-timeline .sequence-paused {
+  opacity: 0.3;
+}
+
+#sequence-timeline .sequence-prev {
+  left: 1%;
+}
+
+#sequence-timeline .sequence-next {
+  right: 1%;
+}
+
+#sequence-timeline .sequence-prev img,
+#sequence-timeline .sequence-next img {
+  height: 100%;
+  width: auto;
+}
+
+#sequence-timeline #sequence-timeline-preloader {
+  background: #d9d9d9;
+}
+
+#sequence-timeline > #timeline-pagination {
+    height: 9%;
+    width: 83%;
+}
+
+#sequence-timeline #timeline-pagination {
+  bottom: 2%;
+  display: none;
+  font-size: 1.3em;
+  left: 8.5%;
+  line-height: 2em;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-timeline #timeline-pagination li {
+  display: inline-block;
+  *display: inline;
+  /* Hack for IE7 and below as they don't support inline-block */
+  /*height: 173px;*/
+  padding: 0 5px 0 5px;
+}
+
+
+#sequence-timeline #timeline-pagination li span {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: margin-bottom, opacity;
+  -moz-transition-property: margin-bottom, opacity;
+  -ms-transition-property: margin-bottom, opacity;
+  -o-transition-property: margin-bottom, opacity;
+  transition-property: margin-bottom, opacity;
+}
+
+#sequence-timeline #timeline-pagination li span:hover {
+  margin-bottom: 4px;
+  opacity: 1;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: margin-bottom, opacity;
+  -moz-transition-property: margin-bottom, opacity;
+  -ms-transition-property: margin-bottom, opacity;
+  -o-transition-property: margin-bottom, opacity;
+  transition-property: margin-bottom, opacity;
+}
+
+#sequence-timeline #timeline-pagination li.current span {
+  opacity: 1;
+  border-bottom: 1px solid #FCC162;
+}
+
+#sequence-timeline h3 {
+  color: white;
+  font-family: 'Numans', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#sequence-timeline .sequence-next,
+#sequence-timeline .sequence-prev {
+  position: absolute;
+  opacity: 0.6;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-timeline .sequence-next:hover,
+#sequence-timeline .sequence-prev:hover {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+
+#sequence-timeline .title {
+	font-family: 'Days One', sans-serif;
+	font-size: 2.25em;
+	font-weight: bold;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+  left: 65%;
+  width: 10%;
+  opacity: 0;
+  top: 55%;
+  z-index: 50;
+}
+
+#sequence-timeline .animate-in .title {
+  left: 5%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-timeline .animate-out .title {
+  left: 35%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-timeline .subtitle {
+	font-family: 'Numans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: .05em;
+  line-height: 1.5em;
+  color: #FFF;
+  left: 35%; 
+  width: 80%;
+  opacity: 0;
+  top: 56.5%;
+  padding: 0;
+}
+
+#sequence-timeline .animate-in .subtitle {
+  left: 15%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-timeline .animate-out .subtitle {
+  left: 60%;
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+
+#sequence-timeline .timeline-image-vertical {
+	bottom: -35%;
+	height: auto; !important;
+  max-height: 66%;!important;
+  	min-width: 28.9%;
+  /* prevents the model from shrinking when the browser is resized */
+  max-width: 28.9%;
+	
+  left: 30%;
+  /*bottom: -21%;*/
+  opacity: 0;
+  position: relative;
+  /*height: auto !important;
+  max-height: 250px !important;*/
+  /*width: 30%;*/
+  /*min-width: 127px;*/
+  /* prevents the model from shrinking when the browser is resized */
+  /*max-width: 179px;*/
+}
+
+#sequence-timeline .timeline-image-horizontal {
+	height: auto; !important;
+  	min-width: 41.7%;
+  /* prevents the model from shrinking when the browser is resized */
+  max-width: 41.7%;
+  left: 30%;
+  bottom: -20%;
+  opacity: 0;
+  position: relative;
+  height: auto !important;
+  max-height: 46%; !important;
+  /*width: 30%;*/
+  /*min-width: 213px;*/
+  /* prevents the model from shrinking when the browser is resized */
+  /*max-width: 250px;*/
+}
+
+#sequence-timeline .iframe {
+	bottom: 0;
+	top: 74%;
+	left: 47%;	
+  position: relative;
+  /*width: 30%;*/
+/*	width: 43.75%;
+	height: auto;
+	max-height: 315px;*/
+display: none;
+	}
+
+/*IMAGE DESCRIPTION*/	
+#sequence-timeline .timeline-description-horizontal {
+	text-align: center;
+	top: 120%;
+}
+
+#sequence-timeline .timeline-description-vertical {
+	/*bottom: -30%;*/
+	margin-left: 29.5%;
+	line-height: 1.5em;
+	min-width: 21%;
+	max-width: 21%;
+	text-align: left;
+
+}
+
+#sequence-timeline .narrow {
+	min-width: 13%;
+	max-width: 13%;
+}
+
+#sequence-timeline .narrower {
+	min-width: 10%;
+	max-width: 10%;
+}
+
+#sequence-timeline .across {
+	min-width: 80%;
+	max-width: 80%;
+}
+
+#sequence-timeline .wide {
+	min-width: 34%;
+	max-width: 34%;
+}
+#sequence-timeline .animate-in .timeline-image-vertical, #sequence-timeline .animate-in .timeline-image-horizontal {
+  /*left: 39%;*/
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+ #sequence-timeline .animate-in .iframe {
+	/* visibility: visible;*/
+	display: block;
+	 -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+ }
+
+#sequence-timeline .animate-in .left {
+ 	left: 2%;
+}
+
+#sequence-timeline .animate-in .center-vertical {
+ 	left: 33%;
+}
+
+#sequence-timeline .animate-in .center-horizontal {
+ 	left: 28%;
+}
+
+
+#sequence-timeline .animate-in .right-vertical {
+ 	left: 53%;
+}
+
+#sequence-timeline .animate-in .right-horizontal {
+ 	left: 49%;
+}
+
+
+#sequence-timeline .animate-in .iframe {
+ 	left: 44.5%;
+}
+
+
+#sequence-timeline .animate-in .across {
+	left: 8%;
+}
+
+#sequence-timeline .animate-out .timeline-image-vertical, #sequence-timeline .animate-out .timeline-image-horizontal {
+  /*left: 15%;*/
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-timeline .animate-out .iframe {
+	visibilty: hidden;
+	  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-timeline .animate-out .center {
+	left: 39%
+}
+
+#sequence-timeline .animate-out .iframe {
+	left: 47%
+}
+
+/*ipad*/		
+/*@media only screen
+and (min-width : 768px)
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	
+}*/
+
+/*@media only screen
+and (min-width : 768px)
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#sequence-timeline > .sequence-canvas {
+	height: 50%;
+	}
+
+}*/
+<!--end ipad-->
+
+@media only screen and (min-width: 992px) {
+  #sequence-timeline .title {
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 838px) {
+  #sequence-timeline {
+    height: 550px;
+  }
+  
+  #sequence-timeline .iframe {
+  	top: 75%;
+  }
+}
+@media only screen and (max-width: 768px) {
+	
+  
+  #sequence-timeline .subtitle {
+	width: 70%;
+  }
+  
+    #sequence-timeline .animate-in .subtitle {
+	left: 17%;
+  }
+
+}
+
+
+@media only screen and (max-width: 760px) {
+  #sequence-timeline {
+    height: 500px;
+  }
+  
+#sequence-timeline .iframe, #sequence-timeline .close-call, #sequence-timeline .close-call div, #sequence-timeline .close-call div object, .iframe {
+		width: 350px;
+		height: 262.5px;
+	}
+	
+#sequence-timeline #timeline-pagination {
+	bottom: 5%;
+}
+
+#sequence-timeline .timeline-image-horizontal {
+	bottom: -16%;
+}
+
+#sequence-timeline .timeline-description-horizontal {
+	top: 115%;
+}
+
+#sequence-timeline .across {
+	min-width: 95%;
+	max-width: 95%;
+}
+
+#sequence-timeline .animate-in .across {
+	left: 2%;
+}
+	
+}
+
+@media only screen and (max-width: 650px) {
+
+#sequence-timeline {
+	  height: 450px;
+}
+  
+#sequence-timeline .iframe, #sequence-timeline .close-call div, #sequence-timeline .close-call div object {
+		width: 250px;
+		height: 187.5px;
+}
+
+#sequence-timeline .iframe {
+		top: 77%;
+}
+		
+#sequence-timeline p {
+	font-size: .8em;
+}
+
+#sequence-timeline .animate-in .subtitle {
+	left: 20%;
+}
+		
+}
+
+@media only screen and (max-width: 500px) {
+
+#sequence-timeline {
+	  height: 430px;
+}
+
+#sequence-timeline .timeline-image-vertical .award {
+	bottom: -14%;
+}
+
+  
+#sequence-timeline .tall {
+	margin: 0;
+	top: 115%;
+	min-width: 95%;
+	max-width: 95%;
+}
+
+#sequence-timeline .animate-in .tall {
+	left: 2%;
+}
+
+
+#sequence-timeline .title {
+	font-size: 1.8em;
+}
+#sequence-timeline .animate-in .title {
+	left: 2%;
+}
+
+#sequence-timeline .subtitle {
+	font-size: 1em;
+	line-height: 1.4em;
+	width: 80%;
+	top: 55%;
+}
+
+#sequence-timeline .animate-in .subtitle {
+	left: 17%;
+	top: 55%;
+}
+
+#sequence-timeline .timeline-image-vertical {
+	bottom: -16%;
+}
+
+#sequence-timeline .timeline-image-horizontal {
+	bottom: -10%;
+}
+
+#sequence-timeline .timeline-description-horizontal {
+	top: 110%;
+}
+
+#sequence-timeline .iframe {
+		top: 73%;
+}
+	
+#sequence-timeline #timeline-pagination {
+	width: 90%;
+	bottom: 8%;
+}
+
+#sequence-timeline .animate-in #timeline-pagination {
+	left: 2.5%;
+}
+}
+
+
+@media only screen and (max-width: 468px) {
+
+
+}
+@media only screen and (max-width: 440px) {
+
+#sequence-timeline .iframe, #sequence-timeline .close-call div, #sequence-timeline .close-call div object {
+	width: 180px;
+	height: 135px;
+}
+
+#sequence-timeline .iframe {
+		top: 84%;
+	}
+	
+#sequence-timeline .animate-in .iframe {
+		left: 47%;
+	}		
+
+#sequence-timeline .timeline-image-vertical {
+	bottom: -13%;
+}
+
+#sequence-timeline .timeline-image-horizontal {
+	bottom: -8%;
+}
+
+#sequence-timeline .timeline-description-horizontal {
+	top: 108%;
+}
+
+#sequence-timeline .award {
+	bottom: -8%;
+}
+
+
+#sequence-timeline .award-desc {
+	top: 110%;
+} 
+  
+
+#sequence-timeline #timeline-pagination {
+	bottom: 8%;
+	height: 12%;
+}
+
+
+#sequence-timeline .iframe p {
+	margin-top: -150px;
+}
+
+#sequence-timeline .tall {
+	margin: 0;
+	top: 113%;
+	min-width: 95%;
+	max-width: 95%;
+}
+
+}
+@media only screen and (max-width: 400px) {
+#sequence-timeline {
+	height: 500px;
+}
+
+#sequence-timeline .title {
+	font-size: 1.4em;
+}
+
+#sequence-timeline .iframe, #sequence-timeline .close-call div, #sequence-timeline .close-call div object {
+	width: 150px;
+	height: 112.5px;
+}
+
+#sequence-timeline .iframe {
+		top: 79%;
+	}
+#sequence-timeline .timeline-image-vertical {
+	bottom: -4%;
+}
+
+#sequence-timeline .timeline-image-horizontal {
+	bottom: -2%;
+}
+
+#sequence-timeline .timeline-description-horizontal {
+	top: 102%;
+}
+
+#sequence-timeline .tall {
+	top: 104%;
+}
+
+#sequence-timeline .tall .award {
+	bottom: -10%;
+}
+
+
+#sequence-timeline .tall .award-desc {
+	top: 104%;
+} 
+
+#sequence-timeline #timeline-pagination {
+	  height: 20%;
+	  bottom: 5%;
+}  
+
+}
+
+@media only screen and (max-width: 368px) {
+
+#sequence-timeline .animate-in .subtitle {
+	left: 20%;
+}	
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+
+
+/*#sequence-timeline .tall {
+	margin: 0;
+	top: 119%;
+	min-width: 95%;
+	max-width: 95%;
+}	
+*/
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+}

@@ -1,0 +1,637 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Modern Slide In
+Version: 1.3
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/modern-slide-in/
+
+This is a FREE theme and is available under a MIT License:
+http://www.opensource.org/licenses/mit-license.php
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+*/
+
+/* THEME STYLES */
+
+#on-uc-campus-gallery h2 {
+	padding: 0px 0px 0px 2%;
+	position: relative !important;
+	margin-top: 78%;
+	z-index: 5;
+}
+
+#sequence-on-uc-campus {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  background-color: #000;
+  /*background-image: url("../images/bg-sequence.jpg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: 50% 100%;*/
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  height: 1050px;
+}
+#sequence-on-uc-campus > .sequence-canvas {
+  /*height: 100%;*/
+  height: 83%;
+  width: 100%;
+}
+#sequence-on-uc-campus > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  /*height: 100%;*/
+  height: 83%;
+  z-index: 1;
+}
+
+#sequence-on-uc-campus > .sequence-canvas > li img {
+  padding-bottom: 15%;
+}
+
+#sequence-on-uc-campus > .sequence-canvas li > * {
+  position: absolute;
+  /* only cause the left and opacity properties to transition */
+  -webkit-transition-property: left, opacity;
+  -moz-transition-property: left, opacity;
+  -ms-transition-property: left, opacity;
+  -o-transition-property: left, opacity;
+  transition-property: left, opacity;
+}
+
+#sequence-on-uc-campus .sequence-next,
+#sequence-on-uc-campus .sequence-prev {
+  color: white;
+  cursor: pointer;
+  /*display: none;*/
+  font-weight: bold;
+  height: 50px;
+  padding: 10px 5px;
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  width: 76px;
+  margin-top: -47.5px;
+}
+
+#sequence-on-uc-campus .sequence-pause {
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+#sequence-on-uc-campus .sequence-paused {
+  opacity: 0.3;
+}
+
+#sequence-on-uc-campus .sequence-prev {
+  left: 1%;
+}
+
+#sequence-on-uc-campus .sequence-next {
+  right: 1%;
+}
+
+#sequence-on-uc-campus .sequence-prev img,
+#sequence-on-uc-campus .sequence-next img {
+  height: 100%;
+  width: auto;
+}
+
+#sequence-on-uc-campus #sequence-on-uc-campus-preloader {
+  background: #d9d9d9;
+}
+
+#sequence-on-uc-campus > #on-uc-campus-pagination {
+    width: 83%;
+}
+
+#sequence-on-uc-campus #on-uc-campus-pagination {
+  display: none;
+  font-family: 'Numans', sans-serif;
+  font-size: 1em;
+  font-weight:bold;
+  left:2%;
+  letter-spacing:.05em;
+  line-height: 1.5em;
+  position: absolute;
+  text-align: left;
+  top: 78%;
+  z-index: 10;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-on-uc-campus #on-uc-campus-pagination li {
+  display: inline-block;
+  *display: inline;
+  /*Hack for IE7 and below as they don't support inline-block*/ 
+  /*height: 173px;*/
+  float: left;
+  padding: 0 5px 0 5px;
+  max-width: 45%;
+  min-width: 45%;
+}
+
+
+#sequence-on-uc-campus #on-uc-campus-pagination li span {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: margin-bottom, opacity;
+  -moz-transition-property: margin-bottom, opacity;
+  -ms-transition-property: margin-bottom, opacity;
+  -o-transition-property: margin-bottom, opacity;
+  transition-property: margin-bottom, opacity;
+}
+
+#sequence-on-uc-campus #on-uc-campus-pagination li span:hover {
+  margin-bottom: 4px;
+  opacity: 1;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: margin-bottom, opacity;
+  -moz-transition-property: margin-bottom, opacity;
+  -ms-transition-property: margin-bottom, opacity;
+  -o-transition-property: margin-bottom, opacity;
+  transition-property: margin-bottom, opacity;
+}
+
+#sequence-on-uc-campus #on-uc-campus-pagination li.current span {
+  opacity: 1;
+  border-bottom: 1px solid #FCC162;
+}
+
+#sequence-on-uc-campus .sequence-next,
+#sequence-on-uc-campus .sequence-prev {
+  position: absolute;
+  opacity: 0.6;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-on-uc-campus .sequence-next:hover,
+#sequence-on-uc-campus .sequence-prev:hover {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+
+#sequence-on-uc-campus .title {
+  	font-family: 'Numans',sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	line-height: 190%;
+	opacity: 0;
+	text-transform: uppercase;
+	top: 80%;
+	z-index: 50;
+}
+
+#sequence-on-uc-campus .animate-in .title {
+  left: 5%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-on-uc-campus .animate-out .title {
+  left: 35%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-on-uc-campus .subtitle {
+	  font-family: 'Numans', sans-serif;
+	  font-size: .65em;
+	  font-style: italic;
+	  font-weight: 400;
+	  letter-spacing: .05em;
+	  line-height: 1.5em;
+	  color: #FFF;
+	  left: 35%; 
+	  min-width: 36%;
+	  max-width: 36%;
+	  opacity: 0;
+	  padding: 0;
+	  top: 102%;
+	  z-index: 50;
+}
+
+#sequence-on-uc-campus .exhibit-details/*gallery subtitle*/ {
+	font-family: 'Numans', sans-serif;
+	  font-size: .65em;
+	  font-style: italic;
+	  font-weight: 400;
+	  letter-spacing: .05em;
+	  line-height: 1.5em;
+	  color: #FFF;
+}
+
+#sequence-on-uc-campus #exhibit-rhodes {
+	left: 100%;
+}
+
+#sequence-on-uc-campus .animate-in #exhibit-ceas {
+  left: 2.5%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-on-uc-campus .animate-in #exhibit-rhodes {
+  left: 41%;
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-on-uc-campus .animate-out #exhibit-ceas {
+  left: 60%;
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-on-uc-campus .animate-out #exhibit-rhodes {
+  left: 60%;
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+/*#exhibit-map {
+	bottom: 11%;
+	position: absolute;
+	right: 2%;
+	z-index: 5;
+}*/
+
+#sequence-on-uc-campus .timeline-image-vertical {
+	bottom: -35%;
+	height: auto; !important;
+  max-height: 66%;!important;
+  	min-width: 28.9%;
+  /* prevents the model from shrinking when the browser is resized */
+  max-width: 28.9%;
+	
+  left: 30%;
+  /*bottom: -21%;*/
+  opacity: 0;
+  position: relative;
+  /*height: auto !important;
+  max-height: 250px !important;*/
+  /*width: 30%;*/
+  /*min-width: 127px;*/
+  /* prevents the model from shrinking when the browser is resized */
+  /*max-width: 179px;*/
+}
+
+#sequence-on-uc-campus .timeline-image-horizontal {
+	height: auto; !important;
+  	min-width: 41.7%;
+  /* prevents the model from shrinking when the browser is resized */
+  max-width: 41.7%;
+  left: 30%;
+  bottom: -20%;
+  opacity: 0;
+  position: relative;
+  height: auto !important;
+  max-height: 46% !important;
+  /*width: 30%;*/
+  /*min-width: 213px;*/
+  /* prevents the model from shrinking when the browser is resized */
+  /*max-width: 250px;*/
+}
+
+#sequence-on-uc-campus .iframe {
+	bottom: 0;
+	top: 74%;
+	left: 47%;	
+  position: relative;
+  /*width: 30%;*/
+/*	width: 43.75%;
+	height: auto;
+	max-height: 315px;*/
+display: none;
+	}
+
+
+/*ipad*/		
+/*@media only screen
+and (min-width : 768px)
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	
+}*/
+
+/*@media only screen
+and (min-width : 768px)
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#sequence-on-uc-campus > .sequence-canvas {
+	height: 50%;
+	}
+
+}*/
+<!--end ipad-->
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (max-width: 960px) {  
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 76%;	
+	}
+	
+	#sequence-on-uc-campus .subtitle {
+		top: 100%;
+	}
+	
+}
+
+@media only screen and (max-width: 900px) {
+    		
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 71%;
+	}
+	
+	#sequence-on-uc-campus .subtitle {
+		top: 95%;
+	}		
+  
+}
+
+	
+@media only screen and (max-width: 838px) {
+ 	#sequence-on-uc-campus {
+    	height: 950px;
+	}
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 73%;
+	}
+	
+	#sequence-on-uc-campus .subtitle {
+		top: 97%;
+	}
+	
+  }
+
+
+@media only screen and (max-width: 768px) {
+  
+    #sequence-on-uc-campus .animate-in .subtitle {
+	left: 17%;
+  	}
+
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 68%;
+	}
+	
+	#sequence-on-uc-campus .subtitle {
+		top: 90%;
+	}
+
+}
+
+
+@media only screen and (max-width: 760px) {
+
+  #sequence-on-uc-campus {
+    height: 850px;
+  }
+  
+  #sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 73%;
+	}	
+	
+  #sequence-on-uc-campus .subtitle {
+		top: 100%;
+	}	
+  
+  #sequence-on-uc-campus #exhibit-rhodes {
+  	max-width: 50%;
+  }
+  
+}
+
+@media only screen and (max-width: 650px) {
+
+  	#sequence-on-uc-campus {
+    height: 825px;
+  	}
+	
+	  #sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 64%;
+	}
+	
+		
+  #sequence-on-uc-campus .subtitle {
+		top: 94%;
+	}	
+
+	
+	#sequence-on-uc-campus .animate-in .subtitle {
+		left: 20%;
+	}
+	
+	#on-uc-campus-gallery h2 {
+		margin-top: 76%;
+	}
+		
+}
+
+@media only screen and (max-width: 500px) {
+
+	#sequence-on-uc-campus {
+		  height: 740px;
+	}
+	
+	#sequence-on-uc-campus .title {
+		font-size: 1.8em;
+	}
+	#sequence-on-uc-campus .animate-in .title {
+		left: 2%;
+	}
+	
+
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 55%;
+	}
+		
+	#sequence-on-uc-campus .subtitle {
+		top: 85%;
+	}	
+	
+	#sequence-on-uc-campus .animate-in #on-uc-campus-pagination {
+		left: 2.5%;
+	}
+	
+	#sequence-on-uc-campus .animate-in .subtitle {
+		left: 17%;
+	}
+
+	
+}
+
+
+@media only screen and (max-width: 468px) {
+	
+		#sequence-on-uc-campus {
+		height: 700px;
+	}
+	
+	
+		#sequence-on-uc-campus #on-uc-campus-pagination {
+		font-size: .75em;
+		top: 55%;
+	}
+
+	#on-uc-campus-gallery h2 {
+		font-size: 2em;
+		margin-top: 73%;
+	}
+				
+	#sequence-on-uc-campus .subtitle {
+		top: 79%;
+	}	
+		
+}
+
+@media only screen and (max-width: 440px) {
+	
+		
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 52%;
+	}
+				
+	#sequence-on-uc-campus .subtitle {
+		top: 78%;
+	}	
+		
+	
+
+}
+
+@media only screen and (max-width: 400px) {
+
+	
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 47%;
+	}
+	
+							
+	#sequence-on-uc-campus .subtitle {
+		top: 72%;
+	}	
+	
+	#sequence-on-uc-campus #exhibit-ceas {
+		max-width: 40%;
+		min-width: 40%;
+	}
+	
+	#on-uc-campus-gallery h2 {
+		margin-top: 69%;
+	}
+}
+
+@media only screen and (max-width: 368px) {
+	
+		
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		top: 43%;
+	}
+
+	#sequence-on-uc-campus .animate-in .subtitle {
+		left: 20%;
+	}
+	
+								
+	#sequence-on-uc-campus .subtitle {
+		top: 70%;
+	}	
+	
+	#on-uc-campus-gallery h2 {
+		margin-top: 60%;		
+	}
+	
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+
+	#sequence-on-uc-campus {
+		height: 625px;
+	}
+
+		
+	#sequence-on-uc-campus #on-uc-campus-pagination {
+		font-size: .7em;
+		top: 42%;
+		width: 95%;
+	}
+	
+	#sequence-on-uc-campus #on-uc-campus-pagination li {
+		max-width: 35%;
+		min-width: 35%;
+	}
+	
+
+	#sequence-on-uc-campus .animate-in .subtitle {
+		left: 20%;
+	}
+								
+	#sequence-on-uc-campus .subtitle {
+		font-size: .6em;
+		top: 69%;
+	}	
+	
+		#on-uc-campus-gallery h2 {
+		margin-top: 54%;		
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+}

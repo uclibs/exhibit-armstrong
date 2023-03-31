@@ -1,0 +1,488 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Modern Slide In
+Version: 1.3
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/modern-slide-in/
+
+This is a FREE theme and is available under a MIT License:
+http://www.opensource.org/licenses/mit-license.php
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+*/
+
+#uc-photo-gallery {
+	position: relative;
+}
+
+
+/*sequence-modern-2*/
+#sequence-uc-gallery {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  background-color: #000;
+  font-size: 0.625em;
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+}
+#sequence-uc-gallery > .sequence-canvas {
+  height: 100%;
+  width: 100%;
+}
+#sequence-uc-gallery > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: -50%;
+}
+/*#sequence-uc-gallery > .sequence-canvas > li img {
+  height: 96%;
+}*/
+#sequence-uc-gallery > .sequence-canvas li > * {
+  position: absolute;
+  /* only cause the left and opacity properties to transition */
+  -webkit-transition-property: left, opacity;
+  -moz-transition-property: left, opacity;
+  -ms-transition-property: left, opacity;
+  -o-transition-property: left, opacity;
+  transition-property: left, opacity;
+}
+
+/*end copy*/
+
+
+#sequence-uc-gallery .sequence-next,
+#sequence-uc-gallery .sequence-prev {
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-weight: bold;
+  height: 36px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  margin-top: -3%;
+  width: 26px;
+}
+
+
+#sequence-uc-gallery .sequence-pause {
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+#sequence-uc-gallery .sequence-paused {
+  opacity: 0.3;
+}
+
+#sequence-uc-gallery .sequence-prev {
+  left: 3%;
+}
+
+#sequence-uc-gallery .sequence-next {
+  right: 3%;
+}
+
+#sequence-uc-gallery .sequence-prev img,
+#sequence-uc-gallery .sequence-next img {
+  height: 100%;
+  width: auto;
+}
+
+#sequence-uc-gallery-preloader {
+  background: #d9d9d9;
+}
+
+/*end copy*/
+
+
+
+#sequence-uc-gallery .sequence-next,
+#sequence-uc-gallery .sequence-prev {
+  position: absolute;
+  opacity: 0.6;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-uc-gallery .sequence-next:hover,
+#sequence-uc-gallery .sequence-prev:hover {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#uc-photo-gallery .title {
+  font-family: 'Days One', sans-serif;
+	font-size: 1.405em;
+	font-weight: bold;
+	letter-spacing: .05em;
+	padding-top: .25em;
+	text-transform: uppercase;
+  left: 15%;
+  position: absolute;
+  opacity: 1;
+  top: 5%;
+  z-index: 50;
+}
+
+/*START*/
+/*
+.hidden, span.hidden {
+	position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}*/
+
+#sequence-uc-gallery .animate-in .hidden {
+  left: -10000px;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-uc-gallery .animate-out .hidden {
+ left: -10000px;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+/*END*/
+
+#sequence-uc-gallery .subtitle {
+  font-family: 'Numans', san-serif;
+  font-size: 1em;
+  left: 30%;
+  line-height: 1.75em;
+  width: 35%;
+  opacity: 0;
+  top: 86%;
+}
+
+#sequence-uc-gallery .animate-in .subtitle {
+  left: 55%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-uc-gallery .animate-out .subtitle {
+  left: 65%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#sequence-uc-gallery .gallery-image {
+  left: 30%;
+  opacity: 0;
+  position: relative;
+  /*height: auto !important;
+  max-height: 305px !important;*/
+  /*width: 30%;*/
+  /*min-width: 355px;
+  /* prevents the model from shrinking when the browser is resized */
+  /*max-width: 400px;*/
+}
+
+.gallery-image-horizontal {
+	bottom: -26%;
+	height: auto !important;
+  max-height: 277px !important;
+  	min-width: 355px;
+  /* prevents the model from shrinking when the browser is resized */
+  max-width: 400px;
+}
+
+.gallery-image-vertical {
+	bottom: -45%;
+	height: auto !important;
+  max-height: 400px !important;
+  	min-width: 235px;
+  /* prevents the model from shrinking when the browser is resized */
+  max-width: 277px;
+}
+
+#sequence-uc-gallery .animate-in .gallery-image {
+  left: 10%;
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#sequence-uc-gallery .animate-out .gallery-image {
+  left: 20%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+@media only screen and (min-width: 992px) {
+  #sequence-uc-gallery .title {
+    width: 42%;
+  }
+}
+@media only screen and (max-width: 838px) {
+  #sequence-uc-gallery {
+    height: 550px;
+  }
+/*  #sequence-uc-gallery .gallery-image {
+    max-height: 530px !important;
+    width: auto;
+  }*/
+  
+    #sequence-uc-gallery .animate-in .gallery-image {
+	left: 10%;
+	}
+	
+  #sequence-uc-gallery .subtitle {
+    font-size: 1.1em;
+	top: 75%;
+	width: 25%;
+  }
+  
+  #sequence-uc-gallery .animate-in .subtitle {
+    left: 65%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #sequence-uc-gallery {
+    height: 500px;
+  }
+/*  #sequence-uc-gallery .title {
+    font-size: .8em;
+  }*/
+  
+   #sequence-uc-gallery .animate-in .subtitle {
+    left: 68%;
+	top: 75%;
+  }
+  
+     #sequence-uc-gallery .animate-out .subtitle {
+	top: 75%;
+  }
+  
+  
+  #sequence-uc-gallery .subtitle {
+    font-size: 1.1em;
+	width: 20%;
+  }
+  #sequence-uc-gallery .sequence-next,
+  #sequence-uc-gallery .sequence-prev {
+    height: 60px;
+    margin-top: -40px;
+  }
+  
+  #sequence-uc-gallery .gallery-image-vertical {
+    min-width: 28.9%;
+	max-width: 28.9%;
+	max-height: 80%;
+  }
+  
+  #sequence-uc-gallery .gallery-image-horizontal {
+  min-width: 41.7%;
+	max-width: 41.7%;
+	max-height: 55%;
+  }
+}
+
+/*GOES TO VERTICAL LAYOUT*/
+
+/*@media only screen and (max-width: 568px)*/ 
+@media only screen and (max-width: 618px) {
+  #sequence-uc-gallery .gallery-image {
+    /*left: 130%;*/
+    min-width: 40%;
+    /*prevents the model from shrinking when the browser is resized*/
+    width: 40%;
+  }
+  #sequence-uc-gallery .animate-in .gallery-image {
+    left: 28%;
+  }
+  #sequence-uc-gallery .animate-out .gallery-image {
+    left: 50%;
+  }
+
+#sequence-uc-gallery .subtitle {
+	font-size: 1em;
+    width: 85%;
+	text-align: center;
+	top: 130%;
+    z-index: 10;
+  }
+  
+#sequence-uc-gallery .subtitle.vertical {
+	top: 145%;
+  }  
+  
+  #sequence-uc-gallery .animate-in .subtitle {
+    left: 5%;
+	top: 130%;
+  }
+  #sequence-uc-gallery .animate-out .subtitle {
+    left: 50%;
+	top: 130%;
+  }
+  
+  #sequence-uc-gallery .animate-in .subtitle.vertical {
+    left: 5%;
+	top: 145%;
+  }
+  
+  #sequence-uc-gallery .animate-out .subtitle.vertical {
+    left: 50%;
+	top: 145%;
+  }  
+  
+ /* #sequence-uc-gallery .subtitle {
+    visibility: hidden;
+  }*/
+  #sequence-uc-gallery .sequence-pagination {
+    bottom: 40px;
+  }
+  #sequence-uc-gallery .sequence-pagination li img {
+    height: 100px;
+  }
+   
+  #sequence-uc-gallery .sequence-canvas li {
+  	top: -63%;
+  }
+  
+    #sequence-uc-gallery .sequence-next,
+  #sequence-uc-gallery .sequence-prev {
+    margin-top: -10%;
+  }
+}
+@media only screen and (max-width: 518px) {
+  #sequence-uc-gallery {
+    height: 400px;
+  }
+  
+    #sequence-uc-gallery .sequence-canvas li {
+  	top: -68%;
+  }
+  
+      #sequence-uc-gallery .sequence-next,
+  #sequence-uc-gallery .sequence-prev {
+    margin-top: -16%;
+  }
+}
+@media only screen and (max-width: 468px) {
+  
+  #sequence-uc-gallery .subtitle {
+	font-size: 1em;
+    width: 95%;
+	/*top: 143%;*/
+  }
+  
+    #sequence-uc-gallery .animate-in .subtitle {
+    left: 1.5%;
+  }
+  
+    #sequence-uc-gallery .animate-in .subtitle.vertical {
+    left: 3%;
+  }
+  
+}
+@media only screen and (max-width: 418px) {
+	  #sequence-uc-gallery {
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 368px) {
+
+  }
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  /*iphone portrait*/
+ /* #sequence-uc-gallery {
+    height: 320px;
+  }*/
+  
+  #sequence-uc-gallery {
+    height: 480px;
+  }
+  
+  #sequence-uc-gallery .gallery-image {
+    min-width: 45%;
+    width: 45%;
+  }
+/*  #sequence-uc-gallery .animate-in .gallery-image {
+    margin-left: -22.5%;
+  }
+  #sequence-uc-gallery .animate-out .gallery-image {
+    margin-left: -22.5%;
+  }
+  */
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+	#sequence-uc-gallery {
+    height: 500px;
+  }
+	  #sequence-uc-gallery .gallery-image {
+    min-width: 45%;
+    width: 45%;
+  }
+  
+    #sequence-uc-gallery .subtitle {
+	font-size: .6em;
+    width: 95%;
+	margin-left: -2%;
+	/*top: 143%;*/
+  }
+/*  #sequence-uc-gallery {
+    height: 260px;
+  }*/
+/*  #sequence-uc-gallery .gallery-image {
+    min-width: 24%;
+    width: 24%;
+  }*/
+/*  #sequence-uc-gallery .animate-in .gallery-image {
+    left: 17.5%;
+    margin-left: 0;
+  }
+  #sequence-uc-gallery .animate-out .gallery-image {
+    left: 17.5%;
+    margin-left: 0;
+  }
+  #sequence-uc-gallery .sequence-pagination {
+    right: 17.5%;
+  }*/
+}

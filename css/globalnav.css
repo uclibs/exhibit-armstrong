@@ -1,0 +1,220 @@
+/* Draggable Global Nav Component */
+.GlobalNavDraggable {
+	font-family: Arial,Helvetica,sans-serif;
+	/*font-size: .75em;*/
+	font-size: 0.682em;
+	line-height: 1.4em;
+    /*width: 960px;*/
+    height: 21px;
+    padding: 5px 0 5px 0;
+    margin: 0 auto;
+    background: black;
+/*	
+	position: relative;
+	width: 100%; max-width: 960px;*/
+}
+
+.GlobalNavDraggable ul.NavList {
+	
+    /*width: 960px;*/
+	/*width: 710px;*/
+	/*width: 73.96%;*/
+	/*max-width: 710px;
+	width: 100%;*/
+    margin: 0;
+    padding: 0;
+	/*padding-left: 250px;*/
+	padding-left: 26.04%;
+    list-style: none;
+    list-style-image: none;
+    display: block;
+}
+
+.GlobalNavDraggable ul.NavList li.NavItem {
+    float: left;
+    display: block;
+    /*height: 21px;*/
+	height: 100%;
+    /*padding: 0 0 0 10px;*/
+	padding-left: 1.41%;
+    margin: 0;
+    list-style-image: none;
+    text-align:left;
+}
+
+.GlobalNavDraggable ul.NavList1 li.NavItem {
+    width: 620px;
+}
+
+.GlobalNavDraggable ul.NavList2 li.NavItem {
+    width: 310px;
+}
+
+.GlobalNavDraggable ul.NavList3 li.NavItem {
+    width: 203px;
+}
+
+.GlobalNavDraggable ul.NavList4 li.NavItem {
+    /*width: 150px;*/
+	text-align: center;
+	/*width: 95px;*/
+	width: 13.381%;
+}
+
+.GlobalNavDraggable ul.NavList5 li.NavItem {
+    width: 118px;
+}
+
+.GlobalNavDraggable ul.NavList6 li.NavItem {
+    width: 96px;
+}
+
+.GlobalNav ul.NavList li.NavItem .NavLink span,
+.GlobalNavDraggable ul.NavList li.NavItem .NavLink span {
+    color:#e00122 !important;
+    /* arrow character after "Support UC" */
+    }
+
+ul#GlobalNavSearchOptionsUL li {
+    list-style-image: none !important;
+}
+
+.GlobalNavDraggable ul.NavList li.ToolsItem {
+    padding-left: 1.41%;
+    /*text-align:left;*/
+	text-align: center;
+}
+
+.GlobalNavDraggable ul.ToolsList {
+    display: none;
+    /*position: relative;*/
+	position: absolute;
+    _position: absolute; top: 22px;
+    /*top: 0;*/
+    margin: 0 0 0 -12px;
+    _margin-top: 22px;
+    _margin-left: -66px;
+    padding: 5px 10px;
+    list-style: none;
+    list-style-image: none;
+    line-height: 1.4em;
+    border: 2px solid white;
+    width:90px;
+    background: white;
+	z-index: 11000;
+}
+
+.GlobalNavDraggable ul.ToolsList {
+    background: rgba(255, 255, 255, .95);
+}
+
+.GlobalNavDraggable ul.ToolsList li.ToolDropItem {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+}
+
+.GlobalNavDraggable ul.NavList li.SearchItem {
+    position: relative;
+    float: right;
+    /*width: 300px;*/
+	/*width: 280px;*/
+	width: 39.438%;
+    /*padding: 0/* 10px*/
+	padding-left: 1.41%;
+    margin: 0;
+    list-style-image: none;
+    text-align: left;
+}
+
+.GlobalNavDraggable ul.NavList li.SearchItem input.SearchBox {
+    float: left;
+    /*width: 248px;*/
+	width: 88.575%;
+    height: 19px;
+    border: 1px solid white;
+    padding: 0;
+    color: #000;
+    background: white;
+    z-index: 9 !important;
+}
+
+.GlobalNavDraggable ul.NavList li.SearchItem input.SearchButton {
+    float: left;
+    width: 7.5%;
+    /*height: 7.5%;*/
+    /*margin: 0 0 0 8px;*/
+	margin-left: 2.86%;
+}
+
+.GlobalNavDraggable ul.SearchList {
+    display: none;
+    position: relative;
+    _position: absolute;
+    top: 0;
+    clear: both;
+    width: 226px;
+    margin: 0;
+    _margin-top: 22px;
+    padding: 10px;
+    list-style: none;
+    list-style-image: none;
+    z-index: 300;
+    border: 2px solid white;
+    background: #f9f9f9;
+}
+
+.GlobalNavDraggable ul.SearchList {
+    background: rgba(255, 255, 255, .95);
+}
+
+.GlobalNavDraggable ul.SearchList li.CloseItem {
+    margin-top: 10px;
+}
+
+.GlobalNavDraggable ul.NavList li.NavItem a.NavLink {
+    color: #fff;
+    text-decoration: none;
+}
+
+.GlobalNavDraggable ul.NavList li.NavItem.SupportItem a.NavLink {
+    font-weight:bold;
+}
+
+.GlobalNavDraggable ul.NavList li.NavItem a.NavLink:hover {
+    text-decoration: underline;
+}
+
+.GlobalNavDraggable ul.ToolsList a {
+    color: #e00122;
+    text-decoration: underline;
+}
+
+.GlobalNavDraggable ul.ToolsList a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.GlobalNavDraggable ul.SearchList a,.GlobalNavDraggable ul.SearchList label
+    {
+    color: #e00122;
+    text-decoration: underline;
+}
+
+.GlobalNavDraggable ul.SearchList a:hover,.GlobalNavDraggable ul.SearchList label:hover
+    {
+    color: black;
+    text-decoration: underline;
+}
+
+.GlobalNavDraggable ul.SearchList li.CloseItem a.CloseLink {
+    color: #000;
+    text-decoration: none;
+}
+
+.GlobalNavDraggable ul.NavList li.SearchItem input.SearchBoxWatermark {
+    color: #999;
+    font-style: italic;
+}

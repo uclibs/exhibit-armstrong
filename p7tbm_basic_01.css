@@ -1,0 +1,202 @@
+/* 
+  -----------------------------------
+  TabBar Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme:01 - Basic
+  -----------------------------------
+*/
+
+#p7TBM {
+	font-family:Arial, Helvetica, sans-serif;
+	z-index: 250;
+	top: 10px;
+	position: relative;
+	left: 25px;}
+	
+/*	
+#p7TBM {
+	font-family:Arial, Helvetica, sans-serif;
+	z-index: 250;
+	top: 36px;
+	position: relative;
+	left: -12px;
+	}*/
+
+    
+
+#p7TBMroot {
+	font-size: 100%;
+	font-weight: bold;
+	
+		}
+#p7TBMrootbox {
+	background-image: url(/screens/images/tabline.gif);
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-position: 0px 14px;
+	height: 26px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+}
+
+#p7TBMroot img {
+	border: 0;
+}
+#p7TBMroot ul {
+	margin: 10px 0 0 7px;
+	padding: 0;
+	display: block;
+}
+#p7TBMroot li {
+	list-style-type: none;
+	display: inline;
+	padding: 0px;
+
+}
+#p7TBMroot li a {
+	float: left;
+	
+}
+#p7TBMroot .p7TBMtext li a {
+	font-size: 100%;
+	padding-top: 5px;
+    padding-bottom:7px;
+    padding-left:10px;
+    padding-right:10px;
+	background-repeat: repeat-x;
+	line-height: 0.9em;
+	color: #333333;
+	text-decoration: none;
+	background-color:#ece9e8;
+	width: auto;
+	margin-right: 8px;
+	margin-left: 8px;
+
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-left-color: #666666;
+	border-bottom-color: #CCCCCC;
+	border-bottom-width:0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+}
+/* on tab*/
+#p7TBMroot .p7TBMtext .p7TBMdown, #p7TBMroot .p7TBMtext .p7TBMdown:hover {
+	color: #990000!important;
+	background-image: none !important;
+	background-color:#FFFFFF;
+	width: auto;
+	margin-right: 2px;
+	margin-left: 2px;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-left-color: #666666;
+	border-bottom-color: #FFFFFF;
+	border-bottom-width:1px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+/*
+The Root Level Hover. This also locks the Hover state while 
+the root item's associated sub-menu is visible.
+DO NOT CHANGE SELECTOR NAMES*/
+.p7ie6Fix:active, 
+#p7TBMroot .p7TBMtext .p7TBMon,
+#p7TBMroot .p7TBMtext li a:focus, 
+#p7TBMroot .p7TBMtext li a:active {
+	color: #274F76;
+	background-color: #ccc;
+	margin-right: 2px;
+	margin-left: 2px;
+	z-index: 200;
+	margin-bottom: 1px;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+#p7TBMsubwrap{
+	font-size: 1em;
+	position: relative;
+	height: auto;
+	left: 0px;
+	font-weight: bold;
+	top: -62px;
+
+}
+.p7TBMsub {
+	position: absolute;
+	visibility:hidden;
+			
+}
+.p7TBMsubbox {
+	padding: 8px 0 0 0;
+}
+/*
+SUBMENU BAACKGROUNDS and BORDERS HERE*/
+.p7TBMsub ul {
+	margin: 0;
+	background-image: url(/screens/p7tbm/img/iebfix.gif);
+	border: 0;
+	
+	}
+/*.p7TBMsub li {
+	list-style-type: none;
+	display: inline;
+}*/
+.p7TBMsub li  {
+
+    list-style-type: none;
+	display: block;
+	color: #000000;
+	padding: 2px 2px 8px 2px;
+	position: relative;
+    margin-bpttom:10px;
+	
+}
+.p7TBMsub li a:hover,
+.p7TBMsub li a:active,.p7TBMsub li a:visited {
+	color: #000000;
+	text-decoration: none;	
+}
+
+.p7TBMsub li a:focus {
+	color: #000000;
+}
+#p7TBM br {
+	clear: both;
+	height: 0;
+	line-height: 0.0;
+	font-size: 1px;
+}
+
+/* current marker style */
+.p7TBMsub .p7TBMmark,
+.p7TBMsub .p7TBMmark:hover,
+.p7TBMsub .p7TBMmark:active,
+.p7TBMsub .p7TBMmark:focus {
+	font-weight:bold;
+	cursor: default;
+	text-decoration: underline;
+	
+}

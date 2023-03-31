@@ -1,0 +1,436 @@
+
+/*Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Photo Stack
+Version: 1.2
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/photo-stack/
+
+This is a PREMIUM theme and is available under the following license:
+http://sequencejs.com/developers/license-information/#premium
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 unless otherwise stated.*/
+#collection {
+	clear: both;
+}
+
+#sequence-theme-collection {
+  background-image: url("../images/collection-bkgrnd.jpg");
+  background-repeat: no-repeat;
+  background-color:#f5f5f3;
+  /*add max-height?*/
+  height: 500px;
+  padding: 20px 0 100px 0;
+  overflow: hidden;
+  /* hide animated elements as they'll go beyond the Sequence container */
+  width: 100%; }
+
+/* THEME STYLES */
+#sequence-collection .sequence-fallback {
+  /* in browsers that don't support CSS3 (such as IE8 & 9), hide the overflow and fix the height */
+  overflow: hidden;
+  background: none !important;
+  height: 600px !important; }
+
+  #sequence-collection .sequence-fallback #sequence-nav {
+    bottom: 60px !important;
+    top: auto; }
+
+#sequence-collection {
+  background-size: contain;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 654px;
+  position: relative;
+  width: 98%; }
+
+  #sequence-collection > .sequence-canvas {
+    height: 100%;
+    width: 100%; }
+
+  #sequence-collection > .sequence-canvas > li {
+    /* make each Sequence frame 100% of the container */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+
+  #sequence-collection > .sequence-canvas li > * {
+    /* make all animated elements position absolute so their left/right/top/bottom can be manipulated */
+    position: absolute; }
+	
+    #sequence-collection > .sequence-canvas > li:nth-child(1) img { 
+	  /* animate-out position for "answer on moon dust" */
+	  left: 57%;
+	  top: -24%;
+      -webkit-transform: rotate(-10deg);
+      -moz-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+      -o-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+      }
+	  
+	#sequence-collection > .sequence-canvas > li:nth-child(2) img {
+      /* animate-out position for "Lunar Map" */
+      left: -25%;
+      top: 15%;
+      -webkit-transform: rotate(10deg);
+      -moz-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      -o-transform: rotate(10deg);
+      transform: rotate(10deg); 
+	  }  
+
+	#sequence-collection > .sequence-canvas > li:nth-child(3) img {
+		/* animate-out position for "poem" */
+      left: 65%;
+	  top: 48%;
+      -webkit-transform: rotate(-4deg);
+      -moz-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+      -o-transform: rotate(-4deg);
+      transform: rotate(-4deg); 
+	  }
+	
+
+    #sequence-collection > .sequence-canvas > li:nth-child(4) img {
+			/* animate-out position for "flight log book" */
+	  left: 10%;
+      top: 27%;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); 
+	  }
+      
+      
+	  
+    #sequence-collection > .sequence-canvas > li:nth-child(5) img {
+		/* animate-out position for "Communications in the Space Age"*/
+      left: -20%;
+      top: 98%;
+      -webkit-transform: rotate(-12deg);
+      -moz-transform: rotate(-12deg);
+      -ms-transform: rotate(-12deg);
+      -o-transform: rotate(-12deg);
+      transform: rotate(-12deg); 
+	  }
+		
+	  
+	  
+    #sequence-collection > .sequence-canvas > li:nth-child(6) img {
+      /* animate-out position for "photo" */
+      left: -35%;
+      top: -20%;
+      -webkit-transform: rotate(4deg);
+      -moz-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
+      -o-transform: rotate(4deg);
+      transform: rotate(4deg); 
+	  }
+	  
+	  	  
+	#sequence-collection > .sequence-canvas > li:nth-child(7) img {
+      /* animate-out position for "HARP abstract" */
+	  left: 58%;
+      top: 91%;
+      -webkit-transform: rotate(12deg);
+      -moz-transform: rotate(12deg);
+      -ms-transform: rotate(12deg);
+      -o-transform: rotate(12deg);
+      transform: rotate(12deg);
+	  }  
+	  
+
+   
+    #sequence-collection > .sequence-canvas > li img {
+      cursor: pointer;
+      -webkit-transition-property: left, top, -webkit-transform, margin-left;
+      -moz-transition-property: left, top, -moz-transform, margin-left;
+      -ms-transition-property: left, top, -ms-transform, margin-left;
+      -o-transition-property: left, top, -o-transform, margin-left;
+      transition-property: left, top, transform, margin-left;
+      -webkit-transition-timing-function: ease-in-out;
+      -moz-transition-timing-function: ease-in-out;
+      -ms-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 1s;
+      -moz-transition-duration: 1s;
+      -ms-transition-duration: 1s;
+      -o-transition-duration: 1s;
+      transition-duration: 1s;
+      width: 80%;
+      height: auto;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); }
+	  
+    #sequence-collection > .sequence-canvas > li.animate-in img {
+      /* animate-in position for all images */
+      cursor: default;
+      left: 10%;
+      /* move the image back to the left to center it (because the frame is moved to the left by 50%) */
+      top: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+
+  #sequence-collection #sequence-nav {
+    /* Sequence navigation */
+    background-color:#f5f5f3;
+    border-radius: 5px;
+    top: 40px;
+    color: #999;
+    font-family: 'Numans', sans-serif;
+	font-size: 12px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+	text-transform: uppercase;
+    width: 480px;
+    z-index: 100; }
+	
+    #sequence-collection #sequence-nav li {
+      /* Navigation list items that contain the prev/next button and sequence caption */
+      display: inline-block;
+      *display: inline;
+      vertical-align: middle; }
+    
+    #sequence-collection #sequence-nav .sequence-nav-button {
+       Next and previous navigation buttons 
+      cursor: pointer;
+     }
+	 
+	 .collection-prev {
+		 float: left;
+		 padding-left: 1em;
+	 }
+	 
+	 .collection-next {
+		 float: right;
+		 padding-right: 1em;
+	 }
+
+    #sequence-collection #sequence-nav .sequence-nav-caption {
+      height: 21px;
+      padding: 10px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 70%;
+      white-space: normal; }
+
+  #instructions-nav {
+    background-color: #999;
+    border-radius: 5px;
+    top: 38px;
+    color: #2e3438;
+    font-family: 'Numans', sans-serif;
+	font-size: 12px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+	text-transform: capitalize;	
+    width: 60%;
+    z-index: 100; }	   
+	  
+	#collection-instructions {
+		font-style: italic;
+		padding: 10px 0 10px 0;
+
+	}
+	
+	#sequence-collection span#collection-link a {
+		border: none;
+		cursor:url('../images/armstrong-link-icon-hover.png'), pointer;
+		height: 200px;
+		position: absolute; top: 100px; left: 200px;
+		width: 200px;
+		z-index: 10;
+	}
+	
+	#sequence-collection span#collection-link a:hover, #sequence-collection span#collection-link a:hover{
+		border: none;
+		cursor:url('../images/armstrong-link-icon-hover.png'), pointer;
+		}
+		
+	#sequence-collection span#collection-link a:visited {
+		border: none;
+		}		
+	
+	/*the collection page*/	
+
+#collection-header {
+	background-color:#f5f5f3;
+	color: #000;
+	padding: 1em .5em 1em .5em;
+}
+
+#collection-header h3 {
+	color: #000;
+	padding-left: 4%;
+	width: 92%;
+}
+
+#collection-header h2 a.link-icon {
+	background-position: left center;
+	color: #000;
+	padding-left: 38px;
+}
+
+#collection-header h2 a.link-icon:hover, #collection-header h2 a.link-icon:active {
+	text-decoration: none;
+	  border-bottom: 2px solid #ead263;
+	  box-model: border-box;
+}
+
+@media only screen and (max-width: 9050px) {
+	/*.image-small { width: 95%; }*/
+	.heading { font-size: 95%; }	
+}
+
+@media only screen and (max-width: 900px) {
+	.image-small { width: 90%; }
+	.heading { font-size: 90%; }	
+}
+
+
+@media only screen and (max-width: 850px) {
+	.image-small { width: 85%; }
+	.heading { font-size: 85%; }	
+}
+
+@media only screen and (max-width: 800px) {
+	.image-small { width: 80%; }
+	.heading { font-size: 80%; }	
+}
+
+@media only screen and (max-width: 750px) {
+	.image-small { width: 75%; }
+	.heading { font-size: 75%; }	
+	#the-man-header {width: 200px;}
+}
+
+@media only screen and (max-width: 700px) {
+	.image-small { width: 65%; }
+	.heading { font-size: 70%; }	
+}
+
+@media only screen and (max-width: 620px) {
+  /* line 183, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li img {
+    width: 84%; }
+  /* line 187, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li.animate-in img {
+    /* animate-in position for all images */
+    left: 8%; }
+    /* move the image back to the left to center it (because the frame is moved to the left by 50%) */ 
+	.image-small { width: 60%; }
+	.heading { font-size: 65%; }
+	 }
+@media only screen and (max-width: 570px) {
+  /* line 196, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li img {
+    width: 90%; }
+  /* line 200, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li.animate-in img {
+    /* animate-in position for all images */
+    left: 5%;
+    /* move the image back to the left to center it (because the frame is moved to the left by 50%) */ } 
+	.image-small { width: 55%; }
+	.heading { font-size: 60%; }
+	}
+/*scale the height based on width*/
+@media only screen and (max-width: 500px) {
+  /* line 208, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme-collection {
+    height: 425px; }
+    /* line 211, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme-collection #sequence-nav {
+      width: 96%; }
+	  
+	  #sequence-theme-collection #collection-header {
+      width: 96%; } 
+	 .image-small { width: 50%; }
+	.heading { font-size: 50%; }
+		   }
+@media only screen and (max-width: 450px) {
+  /* line 218, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme-collection {
+    height: 375px; }
+    /* line 221, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme-collection #sequence-nav {
+      width: 96%; }
+	.image-small { width: 40%; }
+	.heading { font-size: 40%; }
+	 	   }
+@media only screen and (max-width: 400px) {
+  /* line 228, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme-collection {
+    height: 350px; }
+    /* line 231, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme-collection #sequence-nav {
+      width: 96%; } 
+	/*  #sequence-theme-collection #collection-header {
+      width: 96%; }*/ 
+	  .image-small { width: 30%; }
+	 .heading { font-size: 35%; } }
+	 
+/*smartphones*/	 
+@media only screen and (max-width: 320px) {
+  /* line 238, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme-collection {
+    height: 300px; }
+    /* line 241, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme-collection #sequence-nav {
+      width: 96%; }
+	 .image-small { width: 25%; } 
+	 .heading { font-size: 30%; }
+		}
+		
+/*ipad*/		
+@media only screen
+and (min-width : 768px)
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	
+	 /*.page-subtitle,*/ #feature {
+        display: block;
+		margin-bottom: 2.5em;
+        padding: 0;
+		width: 100%;
+    }
+	
+	#sequence-theme-collection {
+		height: 300px;
+	}
+	
+	#sequence-collection {
+		height: 45%;
+		max-width: 432px;
+		width: 49%;
+	}
+	
+	#collection-header h3 {
+		width: 97%;
+	}
+	
+	#sequence-collection #sequence-nav {
+		margin-top: 15em;
+	}
+
+}
+
+@media only screen
+and (min-width : 768px)
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#collection-header h3 {
+		width: 95%;
+	}
+}
+
+
+
